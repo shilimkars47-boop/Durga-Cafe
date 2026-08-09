@@ -1,0 +1,578 @@
+/* ==========================================================================
+   CAFE DURGA - ELEGANT BENTO REDESIGN
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+    /* Exact Cafe Durga Theme Colors */
+    --bg-main: #158D66; /* Background Green */
+    --brand-yellow: #F7D619; /* Bright Yellow */
+    
+    --text-light: #ffffff;
+    --text-muted: rgba(255, 255, 255, 0.85);
+    --text-dark: #2a221b; /* For text on light backgrounds */
+    
+    --card-bg-light: #ffffff; 
+    --card-bg-dark: #0f664a; /* Darker green for contrast cards */
+    
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    
+    --border-radius-lg: 32px;
+    --border-radius-md: 20px;
+    --border-radius-sm: 12px;
+    
+    --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-light);
+    background-color: var(--bg-main);
+    line-height: 1.6;
+    padding: 20px; /* Outer frame padding like the reference */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   TYPOGRAPHY
+   ========================================= */
+h1, h2, h3, h4, h5 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* =========================================
+   NAVIGATION (HEADER)
+   ========================================= */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    margin-bottom: 20px;
+}
+
+.nav-logo img {
+    height: 45px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--brand-yellow);
+}
+
+.nav-btn {
+    background-color: var(--brand-yellow);
+    color: var(--text-dark);
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: #fff;
+    color: var(--text-dark);
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-light);
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+.hero-wrapper {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    min-height: 500px;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    margin-bottom: 30px;
+    background-color: var(--card-bg-dark); /* Fallback */
+}
+
+/* Image inside hero wrapper */
+.hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    max-width: 600px;
+    padding-left: 60px;
+    color: #fff;
+}
+
+.hero-tag {
+    background-color: rgba(255,255,255,0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.hero-title {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    font-family: var(--font-body);
+}
+
+.btn-light {
+    background-color: var(--brand-yellow);
+    color: var(--text-dark);
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    display: inline-block;
+    align-self: flex-start;
+    transition: transform 0.3s;
+}
+
+.btn-light:hover {
+    transform: translateY(-3px);
+    background-color: #fff;
+}
+
+/* =========================================
+   MENU TEASER GRID (BENTO ROW 1)
+   ========================================= */
+.bento-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.bento-card {
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 4/5;
+    background-color: var(--card-bg-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.bento-card-dark {
+    background-color: var(--card-bg-dark);
+    color: #fff;
+}
+
+.bento-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.bento-card:hover img {
+    transform: scale(1.05);
+}
+
+.bento-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);
+    z-index: 1;
+}
+
+.bento-card-content {
+    position: relative;
+    z-index: 2;
+}
+
+.bento-card-title {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: var(--brand-yellow);
+}
+.bento-card-dark .bento-card-title {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    font-size: 2rem;
+    color: var(--text-light);
+}
+
+/* =========================================
+   ABOUT & AWARDS BENTO (BENTO ROW 2)
+   ========================================= */
+.bento-grid-mixed {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.bento-large-image {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+}
+
+.bento-large-image img {
+    width: 90%;
+    max-width: 450px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 60%; /* Crops the white corners to make a perfect circle */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 0 10px rgba(255,255,255,0.05); /* Strong shadow effect */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+.bento-large-image img:hover {
+    transform: scale(1.05) rotate(3deg);
+    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.6), 0 0 0 15px rgba(255,255,255,0.15);
+}
+
+.bento-text-card {
+    background-color: var(--card-bg-light);
+    border-radius: var(--border-radius-lg);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bento-text-card h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.bento-text-card p {
+    color: rgba(0,0,0,0.7);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.bento-square-image {
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    position: relative;
+}
+.bento-square-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bento-dark-text-card {
+    background-color: var(--card-bg-dark);
+    color: var(--text-light);
+    border-radius: var(--border-radius-lg);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.bento-dark-text-card h4 {
+    color: var(--brand-yellow);
+    margin-bottom: 10px;
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+.bento-dark-text-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.bento-dark-text-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.about-intro {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+}
+
+.award-primary {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.award-secondary {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    background-color: var(--brand-yellow);
+}
+
+.award-secondary h4,
+.award-secondary h3 {
+    color: var(--text-dark);
+}
+
+.award-secondary p {
+    color: rgba(0,0,0,0.7);
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.site-footer {
+    padding: 40px 20px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-col h4 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.footer-col a, .footer-col p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--brand-yellow);
+    color: var(--text-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+.social-circle:hover {
+    transform: scale(1.1);
+    background-color: #fff;
+}
+
+.btn-footer {
+    background-color: var(--brand-yellow);
+    color: var(--text-dark);
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+/* =========================================
+   MOBILE NAVIGATION
+   ========================================= */
+.mobile-nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 2000;
+}
+
+.mobile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: var(--card-bg-dark);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.mobile-links a {
+    font-size: 2rem;
+    font-family: var(--font-heading);
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.mobile-links a:hover {
+    color: var(--brand-yellow);
+}
+
+.close-mobile-nav {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-mobile-nav:hover {
+    color: var(--brand-yellow);
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 1024px) {
+    .bento-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .bento-grid-mixed {
+        grid-template-columns: 1fr;
+    }
+    .bento-large-image {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        min-height: 400px;
+    }
+    .about-intro, 
+    .award-primary, 
+    .award-secondary {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+    .hero-title {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body { padding: 10px; }
+    
+    .nav-links, .nav-btn { display: none; }
+    .mobile-menu-btn { display: block; }
+    
+    .hero-content {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .bento-text-card h2 {
+        font-size: 2rem;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+}
