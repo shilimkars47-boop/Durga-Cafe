@@ -71,32 +71,65 @@ h1, h2, h3, h4, h5 {
    NAVIGATION (HEADER)
    ========================================= */
 .top-header {
+    position: sticky;
+    top: 10px;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    margin-bottom: 20px;
+    padding: 10px 25px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.top-header:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
 }
 
 .nav-logo img {
-    height: 45px;
+    height: 50px;
     object-fit: contain;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.nav-logo img:hover {
+    transform: scale(1.05);
 }
 
 .nav-links {
     display: flex;
-    gap: 40px;
+    gap: 8px;
 }
 
 .nav-links a {
     font-size: 0.95rem;
     font-weight: 500;
-    color: var(--text-muted);
-    transition: color 0.3s;
+    color: var(--text-light);
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .nav-links a:hover {
-    color: var(--brand-yellow);
+    color: var(--text-dark);
+    background-color: var(--brand-yellow);
+    box-shadow: 0 4px 15px rgba(247, 214, 25, 0.4);
+    transform: translateY(-2px);
 }
 
 .nav-btn {
@@ -104,14 +137,17 @@ h1, h2, h3, h4, h5 {
     color: var(--text-dark);
     padding: 12px 30px;
     border-radius: 30px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: background-color 0.3s;
+    font-size: 0.95rem;
+    font-weight: 700;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(247, 214, 25, 0.3);
 }
 
 .nav-btn:hover {
     background-color: #fff;
     color: var(--text-dark);
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
 }
 
 .mobile-menu-btn {
