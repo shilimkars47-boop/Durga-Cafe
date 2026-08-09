@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafe Durga - Authentic Pune Taste</title>
+    <title>Cafe Durga — Pune's Most Iconic Coffee Brand</title>
+    <meta name="description"
+        content="Cafe Durga is Pune's most recognized coffee brand. Experience our legendary thick cold coffee, misal pav, pav bhaji and more since 2003.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,7 +16,7 @@
     <div class="container">
 
         <!-- HEADER -->
-        <header class="top-header">
+        <header class="top-header" id="topHeader">
             <div class="nav-logo">
                 <img src="logo 2.png" alt="Cafe Durga Logo" onerror="this.src='images/cafe_durga_logo.png'">
             </div>
@@ -25,7 +27,7 @@
                 <a href="#awards">Awards</a>
             </nav>
             <a href="#contact" class="nav-btn">Contact</a>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open mobile menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </header>
@@ -37,49 +39,149 @@
                 onerror="this.src='https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80'">
             <div class="hero-overlay"></div>
 
-            <!-- Internal Content -->
-            <div class="hero-content">
-                <span class="hero-tag">Est. 2003</span>
-                <h1 class="hero-title">Brewed Fresh,<br>Served Warm</h1>
+            <!-- Decorative Orbs -->
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+
+            <!-- Hero Content -->
+            <div class="hero-content reveal">
+                <span class="hero-tag"><i class="fa-solid fa-star" style="margin-right:6px;font-size:0.7rem;"></i>Est. 2003 · Pune's Finest</span>
+                <h1 class="hero-title">
+                    <span class="hero-static">Always </span>
+                    <span class="hero-animated-word" id="heroWord">Fresh</span>
+                </h1>
                 <p class="hero-subtitle">
-                    Café Durga is a leading food service retailer in Pune & arguably the most recognized coffee brand.
-                    Experience our legendary thick cold coffee.
+                    Café Durga — Pune's most loved coffee destination since 2003. Experience our legendary thick cold coffee, iconic misal pav, and so much more.
                 </p>
-                <a href="#menu" class="btn-light">Visit Us</a>
+                <div class="hero-cta-group">
+                    <a href="#menu" class="btn-primary" id="viewMenuBtn">
+                        <i class="fa-solid fa-utensils"></i> View Menu
+                    </a>
+                    <a href="#contact" class="btn-outline" id="findUsBtn">
+                        <i class="fa-solid fa-location-dot"></i> Find Us
+                    </a>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator" id="scrollIndicator">
+                <span>Scroll</span>
+                <div class="scroll-chevrons">
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK STATS BAR -->
+        <section class="stats-bar reveal">
+            <div class="stat-item">
+                <span class="stat-number" data-target="20">0</span><span class="stat-suffix">+</span>
+                <p class="stat-label">Years of Legacy</p>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="12">0</span><span class="stat-suffix">+</span>
+                <p class="stat-label">Branches in Pune</p>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="5">0</span><span class="stat-suffix">★</span>
+                <p class="stat-label">Award Recognitions</p>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="50000">0</span><span class="stat-suffix">+</span>
+                <p class="stat-label">Happy Customers</p>
             </div>
         </section>
 
         <!-- BENTO ROW 1: MENU HIGHLIGHTS -->
         <section id="menu" class="bento-grid-4">
 
-            <div class="bento-card bento-card-dark">
-                <h3 class="bento-card-title">Our<br>Classics</h3>
+            <div class="bento-card bento-card-dark reveal">
+                <div class="menu-intro-content">
+                    <span class="menu-eyebrow">Our Signature</span>
+                    <h3 class="bento-card-title">Classics</h3>
+                    <p class="menu-intro-desc">Timeless flavours crafted with love since 2003.</p>
+                    <a href="#contact" class="btn-menu-more">Full Menu <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
             </div>
 
-            <div class="bento-card">
+            <div class="bento-card reveal" style="animation-delay:0.1s">
                 <img src="images/cold-coffee.png" alt="Cold Coffee"
                     onerror="this.src='https://images.unsplash.com/photo-1517701604599-bb29b565090c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
                 <div class="bento-card-overlay"></div>
                 <div class="bento-card-content">
+                    <span class="food-badge">Bestseller</span>
                     <h4 class="bento-card-title">Cold Coffee</h4>
+                    <p class="food-desc">Thick & creamy. Our signature.</p>
+                    <span class="food-price">₹80</span>
                 </div>
             </div>
 
-            <div class="bento-card">
+            <div class="bento-card reveal" style="animation-delay:0.2s">
                 <img src="images/misal-pav.png" alt="Misal Pav"
                     onerror="this.src='https://images.unsplash.com/photo-1606491956689-2ea866880c84?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
                 <div class="bento-card-overlay"></div>
                 <div class="bento-card-content">
+                    <span class="food-badge">Spicy Pick</span>
                     <h4 class="bento-card-title">Misal Pav</h4>
+                    <p class="food-desc">Pune's iconic street flavour.</p>
+                    <span class="food-price">₹90</span>
                 </div>
             </div>
 
-            <div class="bento-card">
+            <div class="bento-card reveal" style="animation-delay:0.3s">
                 <img src="images/pav-bhaji.png" alt="Pav Bhaji"
                     onerror="this.src='https://images.unsplash.com/photo-1626074964464-f6b0f15c7e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
                 <div class="bento-card-overlay"></div>
                 <div class="bento-card-content">
+                    <span class="food-badge">Crowd Fav</span>
                     <h4 class="bento-card-title">Pav Bhaji</h4>
+                    <p class="food-desc">Buttery, hearty & irresistible.</p>
+                    <span class="food-price">₹100</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- BENTO ROW 1.5: MORE MENU ITEMS -->
+        <section class="bento-grid-3 reveal">
+
+            <div class="bento-card">
+                <img src="images/cheese-sandwich.png" alt="Cheese Sandwich"
+                    onerror="this.src='https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                <div class="bento-card-overlay"></div>
+                <div class="bento-card-content">
+                    <span class="food-badge">Toasted</span>
+                    <h4 class="bento-card-title">Cheese Sandwich</h4>
+                    <p class="food-desc">Golden crisp with gooey cheese.</p>
+                    <span class="food-price">₹70</span>
+                </div>
+            </div>
+
+            <div class="bento-card">
+                <img src="images/cold-chocolate.png" alt="Cold Chocolate"
+                    onerror="this.src='https://images.unsplash.com/photo-1542990253-a781e04c0082?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                <div class="bento-card-overlay"></div>
+                <div class="bento-card-content">
+                    <span class="food-badge">Choco Bliss</span>
+                    <h4 class="bento-card-title">Cold Chocolate</h4>
+                    <p class="food-desc">Rich, velvety & indulgent.</p>
+                    <span class="food-price">₹90</span>
+                </div>
+            </div>
+
+            <div class="bento-card">
+                <img src="images/egg-bhurji.png" alt="Egg Bhurji"
+                    onerror="this.src='https://images.unsplash.com/photo-1525351484163-7529414344d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                <div class="bento-card-overlay"></div>
+                <div class="bento-card-content">
+                    <span class="food-badge">Morning Fav</span>
+                    <h4 class="bento-card-title">Egg Bhurji</h4>
+                    <p class="food-desc">Spiced scrambled eggs, Pune style.</p>
+                    <span class="food-price">₹80</span>
                 </div>
             </div>
 
@@ -89,66 +191,84 @@
         <section id="about" class="bento-grid-mixed">
 
             <!-- Large Image (Left) -->
-            <div class="bento-large-image">
-                <img src="dc.jpg" alt="Cafe Durga Official Logo"
-                    onerror="this.src='https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'">
+            <div class="bento-large-image reveal">
+                <div class="logo-ring-wrapper">
+                    <img src="dc.jpg" alt="Cafe Durga Official Logo"
+                        onerror="this.src='https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'">
+                </div>
             </div>
 
             <!-- Text Card (Center Top) -->
-            <div class="bento-text-card about-intro">
-                <h2>Welcome to Durga Cafe!</h2>
+            <div class="bento-text-card about-intro reveal">
+                <span class="about-eyebrow"><i class="fa-solid fa-mug-hot"></i> Our Story</span>
+                <h2>Welcome to<br>Durga Cafe!</h2>
                 <p>
                     Café Durga is a leading food service retailer in Pune & arguably the most recognized coffee brand.
-                    We have continuously strived to meet our customer's demands. Our ever evolving menu & various
-                    additions of branches supports this statement.
+                    We have continuously strived to meet our customer's demands.
                 </p>
                 <p>
-                    We believe in providing high quality of products at reasonable prices. Our main objectives are
-                    Consumer satisfaction & progressive growth.
+                    Our ever evolving menu & various additions of branches across Pune support this. We believe in providing high quality products at reasonable prices.
                 </p>
+                <div class="about-tags">
+                    <span class="about-tag"><i class="fa-solid fa-check"></i> Since 2003</span>
+                    <span class="about-tag"><i class="fa-solid fa-check"></i> 100% Pure Veg Options</span>
+                    <span class="about-tag"><i class="fa-solid fa-check"></i> Franchise Model</span>
+                </div>
             </div>
 
             <!-- Dark Awards Card (Bottom Middle) -->
-            <div class="bento-dark-text-card award-primary" id="awards">
+            <div class="bento-dark-text-card award-primary reveal" id="awards">
+                <div class="award-icon"><i class="fa-solid fa-trophy"></i></div>
                 <h4>Times of India Group</h4>
                 <h3>Most Iconic Franchiser Award</h3>
-                <p>For the 5th year in a row Cafe Durga has been felicitated for its exemplary business model and great
-                    work ethics.</p>
+                <p>For the 5th year in a row Cafe Durga has been felicitated for its exemplary business model and great work ethics.</p>
             </div>
 
             <!-- Dark Awards Card 2 (Bottom Right) -->
-            <div class="bento-dark-text-card award-secondary">
+            <div class="bento-dark-text-card award-secondary reveal">
+                <div class="award-icon"><i class="fa-solid fa-medal"></i></div>
                 <h4>Economic Times</h4>
                 <h3>Best Franchise Chain</h3>
-                <p>Awarded at the prestigious Economic Times Award ceremony in 2021 for
-                    superior financial performance.</p>
+                <p>Awarded at the prestigious Economic Times ceremony in 2021 for superior financial performance.</p>
             </div>
 
         </section>
 
         <!-- FOOTER -->
         <footer id="contact" class="site-footer">
-            <div class="footer-container">
-                <div class="footer-col">
-                    <h4>Cafe Durga HQ</h4>
-                    <p>Kothrud, Pune<br>Maharashtra, 411038</p>
+            <div class="footer-top reveal">
+                <div class="footer-brand">
+                    <img src="logo 2.png" alt="Cafe Durga Logo" class="footer-logo"
+                        onerror="this.src='images/cafe_durga_logo.png'">
+                    <p class="footer-tagline">Brewing happiness in Pune since 2003.</p>
                 </div>
-
-                <div class="footer-col">
-                    <h4>Contact Us</h4>
-                    <p>info@durgacafe.com</p>
-                    <p>+91 98765 43210</p>
+                <div class="footer-links-group">
+                    <h5>Quick Links</h5>
+                    <a href="#home">Home</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#about">About</a>
+                    <a href="#awards">Awards</a>
                 </div>
-
-                <div class="footer-col">
+                <div class="footer-contact-group">
+                    <h5>Contact Us</h5>
+                    <p><i class="fa-solid fa-location-dot"></i> Kothrud, Pune, Maharashtra 411038</p>
+                    <p><i class="fa-solid fa-envelope"></i> info@durgacafe.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+                </div>
+                <div class="footer-social-group">
+                    <h5>Follow Us</h5>
                     <div class="social-icons">
-                        <a href="#" class="social-circle"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="social-circle"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="social-circle"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-circle" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-circle" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-circle" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-circle" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                     <a href="#menu" class="btn-footer">View Full Menu <i class="fa-solid fa-arrow-right"
-                            style="margin-left: 10px;"></i></a>
+                            style="margin-left: 8px;"></i></a>
                 </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cafe Durga. All rights reserved. Made with <i class="fa-solid fa-heart" style="color:#F7D619;"></i> in Pune.</p>
             </div>
         </footer>
 
@@ -161,9 +281,15 @@
             <a href="#home">Home</a>
             <a href="#menu">Menu</a>
             <a href="#about">About</a>
+            <a href="#awards">Awards</a>
             <a href="#contact">Contact</a>
         </div>
     </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
 
     <script src="app.js"></script>
 </body>
