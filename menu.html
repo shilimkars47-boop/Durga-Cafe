@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu — Cafe Durga | Pune's Most Iconic Coffee Brand</title>
+    <meta name="description"
+        content="Explore the full menu at Cafe Durga, Pune. From legendary cold coffee and thick shakes to misal pav, dosas, sandwiches and more — all at honest prices.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER (same as index) -->
+        <header class="top-header" id="topHeader">
+            <div class="nav-logo">
+                <img src="logo 2.png" alt="Cafe Durga Logo" onerror="this.src='images/cafe_durga_logo.png'">
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html" class="nav-active">Menu</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#awards">Awards</a>
+            </nav>
+            <a href="index.html#contact" class="nav-btn">Contact</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open mobile menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </header>
+
+        <!-- PAGE HERO -->
+        <section class="menu-hero reveal">
+            <div class="menu-hero-content">
+                <span class="menu-hero-tag"><i class="fa-solid fa-utensils"></i> Full Menu</span>
+                <h1 class="menu-hero-title">Our Signature<br><span class="yellow-text">Dishes & Drinks</span></h1>
+                <p class="menu-hero-sub">Crafted fresh every day. Priced honestly. Loved by thousands across Pune since 2003.</p>
+            </div>
+            <div class="menu-hero-orb orb-a"></div>
+            <div class="menu-hero-orb orb-b"></div>
+        </section>
+
+        <!-- FILTER TABS -->
+        <nav class="category-tabs reveal" id="categoryTabs" aria-label="Menu categories">
+            <button class="tab-btn active" data-cat="all" id="tab-all">All</button>
+            <button class="tab-btn" data-cat="beverages" id="tab-beverages">
+                <i class="fa-solid fa-mug-hot"></i> Beverages
+            </button>
+            <button class="tab-btn" data-cat="breakfast" id="tab-breakfast">
+                <i class="fa-solid fa-sun"></i> Breakfast
+            </button>
+            <button class="tab-btn" data-cat="snacks" id="tab-snacks">
+                <i class="fa-solid fa-bowl-food"></i> Snacks & Street Food
+            </button>
+            <button class="tab-btn" data-cat="south-indian" id="tab-south-indian">
+                <i class="fa-solid fa-leaf"></i> South Indian
+            </button>
+            <button class="tab-btn" data-cat="specials" id="tab-specials">
+                <i class="fa-solid fa-star"></i> Chef's Specials
+            </button>
+        </nav>
+
+        <!-- ================================================
+             BEVERAGES
+             ================================================ -->
+        <section class="menu-section" data-section="beverages">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Sip & Savour</span>
+                <h2 class="section-title">Beverages</h2>
+            </div>
+            <div class="menu-grid">
+
+                <div class="menu-card reveal" data-category="beverages">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/menu-1.png" alt="Cold Coffee" loading="lazy">
+                        <span class="bestseller-badge"><i class="fa-solid fa-fire"></i> Bestseller</span>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Cold Coffee</h3>
+                            <span class="menu-price">₹80</span>
+                        </div>
+                        <p class="menu-desc">Our legendary thick cold coffee — the reason people keep coming back. Rich, creamy and blissfully cold.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                            <span class="tag">Cold</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="beverages">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/menu-7.png" alt="Special Cold Coffee" loading="lazy">
+                        <span class="bestseller-badge special"><i class="fa-solid fa-crown"></i> Special</span>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Oreo Cold Choco & Special Coffee</h3>
+                            <span class="menu-price">₹110</span>
+                        </div>
+                        <p class="menu-desc">Indulgent blends topped with Oreo crumble and caramel drizzle. A treat for every coffee lover.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                            <span class="tag">Cold</span>
+                            <span class="tag">Premium</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="beverages">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/menu-4.png" alt="Shakes" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Shakes & Milkshakes</h3>
+                            <span class="menu-price">₹90</span>
+                        </div>
+                        <p class="menu-desc">Mango, Kesar, Cold Chocolate & Strawberry shakes — thick, fresh and served ice cold.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                            <span class="tag">Cold</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="beverages">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/br-1.png" alt="Chai / Tea" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Masala Chai</h3>
+                            <span class="menu-price">₹20</span>
+                        </div>
+                        <p class="menu-desc">Perfectly spiced, piping hot masala chai brewed the traditional Pune way.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                            <span class="tag">Hot</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="beverages">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/br-2.png" alt="Cold Coffee Glass" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Cold Coffee (Regular)</h3>
+                            <span class="menu-price">₹60</span>
+                        </div>
+                        <p class="menu-desc">Classic chilled coffee blend — light, refreshing and perfect for a quick pick-me-up.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                            <span class="tag">Cold</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="beverages">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/br-4.png" alt="Cold Chocolate" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Cold Chocolate</h3>
+                            <span class="menu-price">₹70</span>
+                        </div>
+                        <p class="menu-desc">Rich, velvety and indulgent — a chilled chocolate drink that satisfies every chocolate craving.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                            <span class="tag">Cold</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="beverages">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/br-5.png" alt="Cappuccino" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Cappuccino</h3>
+                            <span class="menu-price">₹50</span>
+                        </div>
+                        <p class="menu-desc">Smooth espresso crowned with a fluffy milk foam cap — a classic done right.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                            <span class="tag">Hot</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="beverages">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/br-6.png" alt="Milk" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Hot / Cold Milk</h3>
+                            <span class="menu-price">₹30</span>
+                        </div>
+                        <p class="menu-desc">Full-cream fresh milk, served hot or chilled. Simple and wholesome.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="beverages">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/br-3.png" alt="Milk with Biscuit" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Milk with Biscuit</h3>
+                            <span class="menu-price">₹40</span>
+                        </div>
+                        <p class="menu-desc">A comforting glass of cold milk paired with a classic chocolate chip cookie.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                            <span class="tag">Cold</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="beverages">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/coffee-3.png" alt="Hot Coffee" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Hot Coffee</h3>
+                            <span class="menu-price">₹35</span>
+                        </div>
+                        <p class="menu-desc">A soothing, well-brewed hot coffee served in a classic mug to warm your day.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                            <span class="tag">Hot</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================================================
+             BREAKFAST
+             ================================================ -->
+        <section class="menu-section" data-section="breakfast">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Rise & Dine</span>
+                <h2 class="section-title">Breakfast</h2>
+            </div>
+            <div class="menu-grid">
+
+                <div class="menu-card reveal" data-category="breakfast">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/poha.png" alt="Poha" loading="lazy">
+                        <span class="bestseller-badge"><i class="fa-solid fa-fire"></i> Bestseller</span>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Poha</h3>
+                            <span class="menu-price">₹50</span>
+                        </div>
+                        <p class="menu-desc">Fluffy flattened rice cooked with onions, mustard seeds and coriander. A Pune breakfast staple.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                            <span class="tag">Breakfast</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="breakfast">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/upma.png" alt="Upma" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Upma</h3>
+                            <span class="menu-price">₹50</span>
+                        </div>
+                        <p class="menu-desc">Semolina cooked with vegetables and spices — a warm, filling morning starter.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                            <span class="tag">Breakfast</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="breakfast">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/khichadi.png" alt="Khichadi" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Khichadi</h3>
+                            <span class="menu-price">₹60</span>
+                        </div>
+                        <p class="menu-desc">Comforting rice and lentil porridge seasoned gently — light on the stomach and full of flavour.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                            <span class="tag">Breakfast</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="breakfast">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/bhurji.png" alt="Egg Bhurji" loading="lazy">
+                        <span class="bestseller-badge spicy"><i class="fa-solid fa-pepper-hot"></i> Spicy</span>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Egg Bhurji</h3>
+                            <span class="menu-price">₹70</span>
+                        </div>
+                        <p class="menu-desc">Masala-loaded scrambled eggs cooked in our signature style. Bold, spiced and utterly satisfying.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag egg">🥚 Egg</span>
+                            <span class="tag">Breakfast</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="breakfast">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/half-fry.png" alt="Half Fry" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Half Fry (Egg)</h3>
+                            <span class="menu-price">₹40</span>
+                        </div>
+                        <p class="menu-desc">Perfectly fried egg with a runny golden yolk — best enjoyed with pav and ketchup.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag egg">🥚 Egg</span>
+                            <span class="tag">Breakfast</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="breakfast">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/omelet.png" alt="Omelet" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Masala Omelet</h3>
+                            <span class="menu-price">₹60</span>
+                        </div>
+                        <p class="menu-desc">Fluffy egg omelet packed with onions, tomatoes, chillies and fresh coriander.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag egg">🥚 Egg</span>
+                            <span class="tag">Breakfast</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================================================
+             SNACKS & STREET FOOD
+             ================================================ -->
+        <section class="menu-section" data-section="snacks">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Pune's Favourites</span>
+                <h2 class="section-title">Snacks & Street Food</h2>
+            </div>
+            <div class="menu-grid">
+
+                <div class="menu-card reveal" data-category="snacks">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/misal.png" alt="Misal Pav" loading="lazy">
+                        <span class="bestseller-badge"><i class="fa-solid fa-fire"></i> Bestseller</span>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Misal Pav</h3>
+                            <span class="menu-price">₹90</span>
+                        </div>
+                        <p class="menu-desc">Pune's pride — a spicy sprouts curry topped with farsan, onion, lemon and buttered pav.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                            <span class="tag spicy-tag">🌶 Spicy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="snacks">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/pav-bhaji.png" alt="Pav Bhaji" loading="lazy">
+                        <span class="bestseller-badge"><i class="fa-solid fa-fire"></i> Bestseller</span>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Pav Bhaji</h3>
+                            <span class="menu-price">₹100</span>
+                        </div>
+                        <p class="menu-desc">Buttery mashed vegetable gravy with a generous dollop of butter, served with toasted pav.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="snacks">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/wada-pav.png" alt="Wada Pav" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Wada Pav</h3>
+                            <span class="menu-price">₹30</span>
+                        </div>
+                        <p class="menu-desc">The humble Mumbai-Pune favourite — spiced potato dumpling in a soft bun with chutneys.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="snacks">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/masala-pav.png" alt="Masala Pav" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Masala Pav</h3>
+                            <span class="menu-price">₹50</span>
+                        </div>
+                        <p class="menu-desc">Toasted pav tossed in a fiery masala with butter — crispy outside, flavour-packed inside.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                            <span class="tag spicy-tag">🌶 Spicy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="snacks">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/cheese.png" alt="Cheese Sandwich" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Cheese Sandwich</h3>
+                            <span class="menu-price">₹70</span>
+                        </div>
+                        <p class="menu-desc">Grilled to golden perfection, loaded with cheese and fresh vegetables. A cafe classic.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="snacks">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/pattise.png" alt="Pattise" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Pattise</h3>
+                            <span class="menu-price">₹40</span>
+                        </div>
+                        <p class="menu-desc">Crispy fried patties with a spiced mashed potato filling — a local Pune street snack treasure.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="snacks">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/burger.png" alt="Burger" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Aloo Burger</h3>
+                            <span class="menu-price">₹60</span>
+                        </div>
+                        <p class="menu-desc">A hearty veggie burger with a golden spiced aloo patty, lettuce, tomato and our special sauce.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================================================
+             SOUTH INDIAN
+             ================================================ -->
+        <section class="menu-section" data-section="south-indian">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Down South Flavours</span>
+                <h2 class="section-title">South Indian</h2>
+            </div>
+            <div class="menu-grid">
+
+                <div class="menu-card reveal" data-category="south-indian">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/idli.png" alt="Idli" loading="lazy">
+                        <span class="bestseller-badge"><i class="fa-solid fa-fire"></i> Bestseller</span>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Idli Sambar</h3>
+                            <span class="menu-price">₹70</span>
+                        </div>
+                        <p class="menu-desc">Soft steamed idlis served with a tangy sambar and coconut chutney — light and wholesome.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="south-indian">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/dosa.png" alt="Plain Dosa" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Plain Dosa</h3>
+                            <span class="menu-price">₹80</span>
+                        </div>
+                        <p class="menu-desc">Thin, crispy fermented crepe served with sambar and two chutneys. South Indian at its finest.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="south-indian">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/cut-dosa.png" alt="Cut Dosa" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Cut Dosa</h3>
+                            <span class="menu-price">₹80</span>
+                        </div>
+                        <p class="menu-desc">Crispy dosa cut into pieces and tossed with spices — a unique street-style twist on the classic.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="south-indian">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/uttappa.png" alt="Uttappa" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Uttappa</h3>
+                            <span class="menu-price">₹90</span>
+                        </div>
+                        <p class="menu-desc">Thick, spongy rice pancake topped with onions, tomatoes and capsicum — served with chutneys.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal" data-category="south-indian">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/wada-sambar.png" alt="Wada Sambar" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Medu Wada Sambar</h3>
+                            <span class="menu-price">₹70</span>
+                        </div>
+                        <p class="menu-desc">Crispy lentil doughnuts dunked in warm tangy sambar with coconut chutney on the side.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================================================
+             CHEF'S SPECIALS
+             ================================================ -->
+        <section class="menu-section" data-section="specials">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Made with Extra Love</span>
+                <h2 class="section-title">Chef's Specials</h2>
+            </div>
+            <div class="menu-grid specials-grid">
+
+                <div class="menu-card menu-card-wide reveal" data-category="specials">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/menu-2.png" alt="Misal Thali" loading="lazy">
+                        <span class="bestseller-badge special"><i class="fa-solid fa-crown"></i> Award Winner</span>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Misal Thali (Full)</h3>
+                            <span class="menu-price">₹130</span>
+                        </div>
+                        <p class="menu-desc">The legendary full Misal Thali — served in traditional copper vessels with pav, curd, onion and lemon. Our most celebrated dish.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                            <span class="tag spicy-tag">🌶 Spicy</span>
+                            <span class="tag award-tag">🏆 Award Winning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card menu-card-wide reveal" data-category="specials">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/menu-3.png" alt="Special Bhurji" loading="lazy">
+                        <span class="bestseller-badge spicy"><i class="fa-solid fa-pepper-hot"></i> Must Try</span>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Chef's Bhurji</h3>
+                            <span class="menu-price">₹90</span>
+                        </div>
+                        <p class="menu-desc">Our chef's signature bhurji — cooked in a cast iron pan with secret masalas, garnished with fresh coriander and lemon. Earthy, bold, fiery.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag egg">🥚 Egg</span>
+                            <span class="tag spicy-tag">🌶 Spicy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card menu-card-wide reveal" data-category="specials">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/menu-5.png" alt="South Indian Platter" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>South Indian Platter</h3>
+                            <span class="menu-price">₹150</span>
+                        </div>
+                        <p class="menu-desc">A premium platter featuring cut dosa, cone dosa, wada sambar and uttappa — the complete South Indian experience at one table.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                            <span class="tag">Platter</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card menu-card-wide reveal" data-category="specials">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/menu-6.png" alt="Pav Bhaji Special and Bread Roll" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Special Pav Bhaji & Bread Roll</h3>
+                            <span class="menu-price">₹120</span>
+                        </div>
+                        <p class="menu-desc">A premium serving of our rich pav bhaji alongside a perfectly baked bread roll — topped with extra butter and garnished with onion rings.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag veg">🟢 Veg</span>
+                            <span class="tag">Combo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card menu-card-wide reveal" data-category="specials">
+                    <div class="menu-card-img-wrap">
+                        <img src="Images3/menu-8.png" alt="Bhurji and Omelet Combo" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-top">
+                            <h3>Bhurji + Omelet Combo</h3>
+                            <span class="menu-price">₹110</span>
+                        </div>
+                        <p class="menu-desc">Two favourites on one plate — our masala bhurji and a thick masala omelet, served sizzling hot in cast iron.</p>
+                        <div class="menu-card-tags">
+                            <span class="tag egg">🥚 Egg</span>
+                            <span class="tag">Combo</span>
+                            <span class="tag spicy-tag">🌶 Spicy</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA BANNER -->
+        <section class="menu-cta reveal">
+            <div class="menu-cta-content">
+                <h2>Can't decide? Just walk in!</h2>
+                <p>Visit any of our 12+ branches across Pune. Our team will help you pick the perfect combo.</p>
+                <a href="index.html#contact" class="btn-primary" id="visitUsBtn">
+                    <i class="fa-solid fa-location-dot"></i> Find a Branch Near You
+                </a>
+            </div>
+            <div class="menu-cta-orb"></div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer id="contact" class="site-footer">
+            <div class="footer-top reveal">
+                <div class="footer-brand">
+                    <img src="logo 2.png" alt="Cafe Durga Logo" class="footer-logo"
+                        onerror="this.src='images/cafe_durga_logo.png'">
+                    <p class="footer-tagline">Brewing happiness in Pune since 2003.</p>
+                </div>
+                <div class="footer-links-group">
+                    <h5>Quick Links</h5>
+                    <a href="index.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#awards">Awards</a>
+                </div>
+                <div class="footer-contact-group">
+                    <h5>Contact Us</h5>
+                    <p><i class="fa-solid fa-location-dot"></i> Kothrud, Pune, Maharashtra 411038</p>
+                    <p><i class="fa-solid fa-envelope"></i> info@durgacafe.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+                </div>
+                <div class="footer-social-group">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="social-circle" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-circle" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-circle" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-circle" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <a href="index.html#contact" class="btn-footer">Back to Home <i class="fa-solid fa-arrow-right"
+                            style="margin-left: 8px;"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cafe Durga. All rights reserved. Made with <i class="fa-solid fa-heart"
+                        style="color:#F7D619;"></i> in Pune.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay" style="display: none;">
+        <div class="mobile-links">
+            <button class="close-mobile-nav" id="closeMobileNav">&times;</button>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script src="app.js"></script>
+    <script src="menu.js"></script>
+</body>
+
+</html>
