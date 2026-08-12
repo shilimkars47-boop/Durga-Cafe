@@ -12,13 +12,19 @@ const heroWord = document.getElementById('heroWord');
 const scrollIndicator = document.getElementById('scrollIndicator');
 
 // --- INITIALIZATION ---
-document.addEventListener('DOMContentLoaded', () => {
+function initApp() {
     setupEventListeners();
     setupScrollObserver();
     setupStatCounters();
     startHeroWordCycle();
     setupScrollHeader();
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initApp);
+} else {
+    initApp();
+}
 
 // ============================================================
 // MOBILE MENU

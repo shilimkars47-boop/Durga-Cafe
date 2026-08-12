@@ -2,23 +2,6 @@
 // CAFE DURGA — LOCATIONS PAGE INTERACTIVITY (locations.js)
 // ============================================================
 
-document.addEventListener('DOMContentLoaded', () => {
-    setupBranchCardClicks();
-    setupSearch();
-    setupAreaChips();
-    setupMapLoader();
-});
-
-// ============================================================
-// BRANCH CARDS — Click to update map
-// ============================================================
-const cards = document.querySelectorAll('.branch-card');
-const mapIframe = document.getElementById('googleMapIframe');
-const mapBranchName = document.getElementById('mapBranchName');
-const mapBranchAddr = document.getElementById('mapBranchAddr');
-const mapDirectionsLink = document.getElementById('mapDirectionsLink');
-const mapLoader = document.getElementById('mapLoader');
-
 const branchData = [
     { name: 'Hotel Durga — Flagship', addr: 'Malati Complex, Kothrud, Pune' },
     { name: 'Cafe Durga', addr: 'Mayur Colony, Kothrud, Pune' },
@@ -33,7 +16,27 @@ const branchData = [
     { name: 'Cafe Durga', addr: 'Hadapsar, Pune' },
 ];
 
+function initLocations() {
+    const cards = document.querySelectorAll('.branch-card');
+    cards.forEach(card => card.classList.add('visible'));
+
+    setupBranchCardClicks();
+    setupSearch();
+    setupAreaChips();
+    setupMapLoader();
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLocations);
+} else {
+    initLocations();
+}
+
+// ============================================================
+// BRANCH CARDS — Click to update map
+// ============================================================
 function setupBranchCardClicks() {
+    const cards = document.querySelectorAll('.branch-card');
     cards.forEach((card, idx) => {
         card.addEventListener('click', (e) => {
             // Don't fire if clicking the directions button link
@@ -45,14 +48,22 @@ function setupBranchCardClicks() {
 }
 
 function selectCard(card, idx) {
+    const cards = document.querySelectorAll('.branch-card');
+    const mapIframe = document.getElementById('googleMapIframe');
+    const mapBranchName = document.getElementById('mapBranchName');
+    const mapBranchAddr = document.getElementById('mapBranchAddr');
+    const mapDirectionsLink = document.getElementById('mapDirectionsLink');
+    const mapLoader = document.getElementById('mapLoader');
+
     // Update active state
     cards.forEach(c => c.classList.remove('active'));
     card.classList.add('active');
+    card.classList.add('visible');
 
     // Update map
     const query = card.getAttribute('data-query');
     const directionsHref = `https://www.google.com/maps/dir/?api=1&destination=${query}`;
-    const data = branchData[idx];
+    const data = branchData[idx] || { name: 'Cafe Durga', addr: card.getAttribute('data-directions') || '' };
 
     // Show loader
     if (mapLoader) {
@@ -83,13 +94,16 @@ function selectCard(card, idx) {
 // IFRAME LOAD — Hide spinner once map loads
 // ============================================================
 function setupMapLoader() {
+    const mapIframe = document.getElementById('googleMapIframe');
+    const mapLoader = document.getElementById('mapLoader');
+
     if (mapIframe && mapLoader) {
         // Hide loader on first load
         mapIframe.addEventListener('load', () => {
             mapLoader.classList.add('hidden');
         });
 
-        // Show loader whenever src changes (handled in selectCard)
+        // Show loader whenever src changes
         const observer = new MutationObserver(() => {
             mapLoader.classList.remove('hidden');
         });
@@ -100,13 +114,10 @@ function setupMapLoader() {
 // ============================================================
 // SEARCH — Filter branch cards
 // ============================================================
-const searchInput = document.getElementById('branchSearch');
-const searchClear = document.getElementById('searchClear');
-const noResults = document.getElementById('noResults');
-const searchTermEl = document.getElementById('searchTerm');
-const visibleCount = document.getElementById('visibleCount');
-
 function setupSearch() {
+    const searchInput = document.getElementById('branchSearch');
+    const searchClear = document.getElementById('searchClear');
+
     if (!searchInput) return;
 
     searchInput.addEventListener('input', () => {
@@ -131,18 +142,26 @@ function setupSearch() {
 }
 
 function filterCards(query) {
+    const cards = document.querySelectorAll('.branch-card');
+    const noResults = document.getElementById('noResults');
+    const searchTermEl = document.getElementById('searchTerm');
+    const visibleCount = document.getElementById('visibleCount');
+    const searchInput = document.getElementById('branchSearch');
+
     let count = 0;
     let firstVisible = null;
 
     cards.forEach((card, idx) => {
         const area = (card.getAttribute('data-area') || '').toLowerCase();
-        const addr = branchData[idx].addr.toLowerCase();
-        const name = branchData[idx].name.toLowerCase();
+        const dataObj = branchData[idx] || {};
+        const addr = (dataObj.addr || '').toLowerCase();
+        const name = (dataObj.name || '').toLowerCase();
 
         const matches = !query || area.includes(query) || addr.includes(query) || name.includes(query);
 
         if (matches) {
             card.classList.remove('hidden');
+            card.classList.add('visible');
             count++;
             if (!firstVisible) firstVisible = { card, idx };
         } else {
@@ -157,7 +176,7 @@ function filterCards(query) {
     if (noResults) {
         if (count === 0) {
             noResults.style.display = 'flex';
-            if (searchTermEl) searchTermEl.textContent = searchInput.value;
+            if (searchTermEl && searchInput) searchTermEl.textContent = searchInput.value;
         } else {
             noResults.style.display = 'none';
         }
@@ -172,9 +191,13 @@ function filterCards(query) {
 // ============================================================
 // AREA CHIPS — Quick area filter
 // ============================================================
-const areaChips = document.querySelectorAll('.area-chip');
-
 function setupAreaChips() {
+    const areaChips = document.querySelectorAll('.area-chip');
+    const searchInput = document.getElementById('branchSearch');
+    const searchClear = document.getElementById('searchClear');
+    const visibleCount = document.getElementById('visibleCount');
+    const noResults = document.getElementById('noResults');
+
     areaChips.forEach(chip => {
         chip.addEventListener('click', () => {
             // Update active chip
@@ -191,6 +214,7 @@ function setupAreaChips() {
 
             let count = 0;
             let firstVisible = null;
+            const cards = document.querySelectorAll('.branch-card');
 
             cards.forEach((card, idx) => {
                 const cardArea = card.getAttribute('data-area') || '';
@@ -198,6 +222,7 @@ function setupAreaChips() {
 
                 if (matches) {
                     card.classList.remove('hidden');
+                    card.classList.add('visible');
                     count++;
                     if (!firstVisible) firstVisible = { card, idx };
                 } else {

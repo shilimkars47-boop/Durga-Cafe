@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Us — Cafe Durga | 11 Branches Across Pune</title>
+    <meta name="description"
+        content="Find a Cafe Durga branch near you. We have 11 locations across Pune — Kothrud, Karvenagar, Bavdhan, Bopodi, Viman Nagar, Hadapsar and more.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="locations.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header class="top-header" id="topHeader">
+            <div class="nav-logo">
+                <img src="logo 2.png" alt="Cafe Durga Logo" onerror="this.src='images/cafe_durga_logo.png'">
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="index.html#about">About</a>
+                <a href="locations.html" class="nav-active">Find Us</a>
+            </nav>
+            <a href="#branch-list" class="nav-btn">Find a Branch</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open mobile menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </header>
+
+        <!-- PAGE HERO -->
+        <section class="loc-hero reveal">
+            <div class="loc-hero-content">
+                <span class="loc-hero-tag">
+                    <i class="fa-solid fa-location-dot"></i> 11 Locations · Pune
+                </span>
+                <h1 class="loc-hero-title">Find a Cafe Durga<br><span class="yellow-text">Near You</span></h1>
+                <p class="loc-hero-sub">
+                    From Kothrud to Hadapsar, from Bavdhan to Viman Nagar — we're closer than you think. Explore all our branches below.
+                </p>
+                <!-- Search Bar -->
+                <div class="loc-search-wrap">
+                    <i class="fa-solid fa-magnifying-glass loc-search-icon"></i>
+                    <input
+                        type="text"
+                        id="branchSearch"
+                        class="loc-search-input"
+                        placeholder="Search by area (e.g. Kothrud, Bavdhan…)"
+                        autocomplete="off"
+                    >
+                    <button class="loc-search-clear" id="searchClear" aria-label="Clear search">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <p class="loc-branch-count"><span id="visibleCount">11</span> branches found</p>
+            </div>
+            <div class="loc-hero-orb orb-a"></div>
+            <div class="loc-hero-orb orb-b"></div>
+        </section>
+
+        <!-- MAIN LAYOUT: MAP + BRANCH LIST -->
+        <div class="loc-layout" id="branch-list">
+
+            <!-- LEFT: BRANCH CARDS -->
+            <aside class="branch-list" id="branchList">
+
+                <div class="branch-card active reveal" data-index="0"
+                    data-query="Hotel+Durga+Malati+Complex+Kothrud+Pune"
+                    data-directions="Hotel Durga, Malati Complex, Kothrud, Pune"
+                    data-area="Kothrud">
+                    <div class="branch-card-header">
+                        <div class="branch-number">01</div>
+                        <div class="branch-info">
+                            <h3>Hotel Durga</h3>
+                            <p class="branch-address">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Malati Complex, Kothrud, Pune
+                            </p>
+                        </div>
+                        <span class="branch-area-tag">Kothrud</span>
+                    </div>
+                    <div class="branch-card-footer">
+                        <span class="branch-hq-badge"><i class="fa-solid fa-star"></i> Flagship</span>
+                        <a class="branch-directions-btn"
+                            href="https://www.google.com/maps/dir/?api=1&destination=Hotel+Durga+Malati+Complex+Kothrud+Pune"
+                            target="_blank" rel="noopener">
+                            <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <div class="branch-card reveal" data-index="1"
+                    data-query="Cafe+Durga+Mayur+Colony+Kothrud+Pune"
+                    data-directions="Cafe Durga, Mayur Colony, Kothrud, Pune"
+                    data-area="Kothrud">
+                    <div class="branch-card-header">
+                        <div class="branch-number">02</div>
+                        <div class="branch-info">
+                            <h3>Cafe Durga</h3>
+                            <p class="branch-address">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Mayur Colony, Kothrud, Pune
+                            </p>
+                        </div>
+                        <span class="branch-area-tag">Kothrud</span>
+                    </div>
+                    <div class="branch-card-footer">
+                        <a class="branch-directions-btn"
+                            href="https://www.google.com/maps/dir/?api=1&destination=Cafe+Durga+Mayur+Colony+Kothrud+Pune"
+                            target="_blank" rel="noopener">
+                            <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <div class="branch-card reveal" data-index="2"
+                    data-query="Cafe+Durga+Chaitanya+Nagar+Kothrud+Pune"
+                    data-directions="Cafe Durga, Chaitanya Nagar, Kothrud, Pune"
+                    data-area="Kothrud">
+                    <div class="branch-card-header">
+                        <div class="branch-number">03</div>
+                        <div class="branch-info">
+                            <h3>Cafe Durga</h3>
+                            <p class="branch-address">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Chaitanya Nagar, Kothrud, Pune
+                            </p>
+                        </div>
+                        <span class="branch-area-tag">Kothrud</span>
+                    </div>
+                    <div class="branch-card-footer">
+                        <a class="branch-directions-btn"
+                            href="https://www.google.com/maps/dir/?api=1&destination=Cafe+Durga+Chaitanya+Nagar+Kothrud+Pune"
+                            target="_blank" rel="noopener">
+                            <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <div class="branch-card reveal" data-index="3"
+                    data-query="Cafe+Durga+Karvenagar+Pune"
+                    data-directions="Cafe Durga, Karvenagar, Pune"
+                    data-area="Karvenagar">
+                    <div class="branch-card-header">
+                        <div class="branch-number">04</div>
+                        <div class="branch-info">
+                            <h3>Cafe Durga</h3>
+                            <p class="branch-address">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Karvenagar, Pune
+                            </p>
+                        </div>
+                        <span class="branch-area-tag">Karvenagar</span>
+                    </div>
+                    <div class="branch-card-footer">
+                        <a class="branch-directions-btn"
+                            href="https://www.google.com/maps/dir/?api=1&destination=Cafe+Durga+Karvenagar+Pune"
+                            target="_blank" rel="noopener">
+                            <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <div class="branch-card reveal" data-index="4"
+                    data-query="Cafe+Durga+Bavdhan+Pune"
+                    data-directions="Cafe Durga, Bavdhan, Pune"
+                    data-area="Bavdhan">
+                    <div class="branch-card-header">
+                        <div class="branch-number">05</div>
+                        <div class="branch-info">
+                            <h3>Cafe Durga</h3>
+                            <p class="branch-address">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Bavdhan, Pune
+                            </p>
+                        </div>
+                        <span class="branch-area-tag">Bavdhan</span>
+                    </div>
+                    <div class="branch-card-footer">
+                        <a class="branch-directions-btn"
+                            href="https://www.google.com/maps/dir/?api=1&destination=Cafe+Durga+Bavdhan+Pune"
+                            target="_blank" rel="noopener">
+                            <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <div class="branch-card reveal" data-index="5"
+                    data-query="Cafe+Durga+Rambaug+Colony+Kothrud+Pune"
+                    data-directions="Cafe Durga, Rambaug Colony, Kothrud, Pune"
+                    data-area="Kothrud">
+                    <div class="branch-card-header">
+                        <div class="branch-number">06</div>
+                        <div class="branch-info">
+                            <h3>Cafe Durga</h3>
+                            <p class="branch-address">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Rambaug Colony, Kothrud, Pune
+                            </p>
+                        </div>
+                        <span class="branch-area-tag">Kothrud</span>
+                    </div>
+                    <div class="branch-card-footer">
+                        <a class="branch-directions-btn"
+                            href="https://www.google.com/maps/dir/?api=1&destination=Cafe+Durga+Rambaug+Colony+Kothrud+Pune"
+                            target="_blank" rel="noopener">
+                            <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <div class="branch-card reveal" data-index="6"
+                    data-query="Cafe+Durga+Bopodi+Pune"
+                    data-directions="Cafe Durga, Bopodi, Pune"
+                    data-area="Bopodi">
+                    <div class="branch-card-header">
+                        <div class="branch-number">07</div>
+                        <div class="branch-info">
+                            <h3>Cafe Durga</h3>
+                            <p class="branch-address">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Bopodi, Pune
+                            </p>
+                        </div>
+                        <span class="branch-area-tag">Bopodi</span>
+                    </div>
+                    <div class="branch-card-footer">
+                        <a class="branch-directions-btn"
+                            href="https://www.google.com/maps/dir/?api=1&destination=Cafe+Durga+Bopodi+Pune"
+                            target="_blank" rel="noopener">
+                            <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <div class="branch-card reveal" data-index="7"
+                    data-query="Durga+Cafe+Viman+Nagar+Pune"
+                    data-directions="Durga Cafe, Viman Nagar, Pune"
+                    data-area="Viman Nagar">
+                    <div class="branch-card-header">
+                        <div class="branch-number">08</div>
+                        <div class="branch-info">
+                            <h3>Durga Cafe</h3>
+                            <p class="branch-address">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Viman Nagar, Pune
+                            </p>
+                        </div>
+                        <span class="branch-area-tag">Viman Nagar</span>
+                    </div>
+                    <div class="branch-card-footer">
+                        <a class="branch-directions-btn"
+                            href="https://www.google.com/maps/dir/?api=1&destination=Durga+Cafe+Viman+Nagar+Pune"
+                            target="_blank" rel="noopener">
+                            <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <div class="branch-card reveal" data-index="8"
+                    data-query="Cafe+Durga+Sahawas+Society+Karvenagar+Pune"
+                    data-directions="Cafe Durga, Sahawas Society, Karvenagar, Pune"
+                    data-area="Karvenagar">
+                    <div class="branch-card-header">
+                        <div class="branch-number">09</div>
+                        <div class="branch-info">
+                            <h3>Cafe Durga</h3>
+                            <p class="branch-address">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Sahawas Society, Karvenagar, Pune
+                            </p>
+                        </div>
+                        <span class="branch-area-tag">Karvenagar</span>
+                    </div>
+                    <div class="branch-card-footer">
+                        <a class="branch-directions-btn"
+                            href="https://www.google.com/maps/dir/?api=1&destination=Cafe+Durga+Sahawas+Society+Karvenagar+Pune"
+                            target="_blank" rel="noopener">
+                            <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <div class="branch-card reveal" data-index="9"
+                    data-query="Cafe+Durga+Symbiosis+Lavale+Road+Pune"
+                    data-directions="Cafe Durga, Symbiosis Lavale Road, Pune"
+                    data-area="Lavale">
+                    <div class="branch-card-header">
+                        <div class="branch-number">10</div>
+                        <div class="branch-info">
+                            <h3>Cafe Durga</h3>
+                            <p class="branch-address">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Symbiosis Lavale Road, Pune
+                            </p>
+                        </div>
+                        <span class="branch-area-tag">Lavale</span>
+                    </div>
+                    <div class="branch-card-footer">
+                        <a class="branch-directions-btn"
+                            href="https://www.google.com/maps/dir/?api=1&destination=Cafe+Durga+Symbiosis+Lavale+Road+Pune"
+                            target="_blank" rel="noopener">
+                            <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <div class="branch-card reveal" data-index="10"
+                    data-query="Cafe+Durga+Hadapsar+Pune"
+                    data-directions="Cafe Durga, Hadapsar, Pune"
+                    data-area="Hadapsar">
+                    <div class="branch-card-header">
+                        <div class="branch-number">11</div>
+                        <div class="branch-info">
+                            <h3>Cafe Durga</h3>
+                            <p class="branch-address">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Hadapsar, Pune
+                            </p>
+                        </div>
+                        <span class="branch-area-tag">Hadapsar</span>
+                    </div>
+                    <div class="branch-card-footer">
+                        <a class="branch-directions-btn"
+                            href="https://www.google.com/maps/dir/?api=1&destination=Cafe+Durga+Hadapsar+Pune"
+                            target="_blank" rel="noopener">
+                            <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <!-- No results -->
+                <div class="no-results" id="noResults" style="display:none;">
+                    <i class="fa-solid fa-magnifying-glass-minus"></i>
+                    <p>No branches found for "<span id="searchTerm"></span>"</p>
+                    <small>Try searching for Kothrud, Bavdhan, Hadapsar etc.</small>
+                </div>
+
+            </aside>
+
+            <!-- RIGHT: GOOGLE MAP -->
+            <div class="map-panel">
+                <div class="map-sticky">
+                    <div class="map-header">
+                        <div class="map-header-info">
+                            <h3 id="mapBranchName">Hotel Durga — Flagship</h3>
+                            <p id="mapBranchAddr"><i class="fa-solid fa-location-dot"></i> Malati Complex, Kothrud, Pune</p>
+                        </div>
+                        <a id="mapDirectionsLink"
+                            href="https://www.google.com/maps/dir/?api=1&destination=Hotel+Durga+Malati+Complex+Kothrud+Pune"
+                            target="_blank" rel="noopener" class="map-directions-pill">
+                            <i class="fa-solid fa-diamond-turn-right"></i> Directions
+                        </a>
+                    </div>
+                    <div class="map-frame-wrap">
+                        <iframe
+                            id="googleMapIframe"
+                            title="Cafe Durga Location Map"
+                            src="https://maps.google.com/maps?q=Hotel+Durga+Malati+Complex+Kothrud+Pune&output=embed&hl=en&z=16"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen>
+                        </iframe>
+                        <div class="map-loading-overlay" id="mapLoader">
+                            <div class="map-spinner"></div>
+                        </div>
+                    </div>
+                    <p class="map-tip">
+                        <i class="fa-solid fa-hand-pointer"></i>
+                        Click any branch card to preview its location here
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- AREA QUICK FILTER CHIPS -->
+        <section class="area-chips-section reveal">
+            <p class="area-chips-label">Browse by area:</p>
+            <div class="area-chips">
+                <button class="area-chip active" data-area="all" id="chip-all">All Areas</button>
+                <button class="area-chip" data-area="Kothrud" id="chip-kothrud">
+                    <i class="fa-solid fa-map-pin"></i> Kothrud
+                </button>
+                <button class="area-chip" data-area="Karvenagar" id="chip-karvenagar">
+                    <i class="fa-solid fa-map-pin"></i> Karvenagar
+                </button>
+                <button class="area-chip" data-area="Bavdhan" id="chip-bavdhan">
+                    <i class="fa-solid fa-map-pin"></i> Bavdhan
+                </button>
+                <button class="area-chip" data-area="Bopodi" id="chip-bopodi">
+                    <i class="fa-solid fa-map-pin"></i> Bopodi
+                </button>
+                <button class="area-chip" data-area="Viman Nagar" id="chip-viman">
+                    <i class="fa-solid fa-map-pin"></i> Viman Nagar
+                </button>
+                <button class="area-chip" data-area="Lavale" id="chip-lavale">
+                    <i class="fa-solid fa-map-pin"></i> Lavale
+                </button>
+                <button class="area-chip" data-area="Hadapsar" id="chip-hadapsar">
+                    <i class="fa-solid fa-map-pin"></i> Hadapsar
+                </button>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="footer-top reveal">
+                <div class="footer-brand">
+                    <img src="logo 2.png" alt="Cafe Durga Logo" class="footer-logo"
+                        onerror="this.src='images/cafe_durga_logo.png'">
+                    <p class="footer-tagline">Brewing happiness in Pune since 2003.</p>
+                </div>
+                <div class="footer-links-group">
+                    <h5>Quick Links</h5>
+                    <a href="index.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="index.html#about">About</a>
+                    <a href="locations.html">Find Us</a>
+                </div>
+                <div class="footer-contact-group">
+                    <h5>Contact Us</h5>
+                    <p><i class="fa-solid fa-location-dot"></i> Kothrud, Pune, Maharashtra 411038</p>
+                    <p><i class="fa-solid fa-envelope"></i> info@durgacafe.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+                </div>
+                <div class="footer-social-group">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="social-circle" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-circle" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-circle" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-circle" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <a href="menu.html" class="btn-footer">View Full Menu
+                        <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cafe Durga. All rights reserved. Made with
+                    <i class="fa-solid fa-heart" style="color:#F7D619;"></i> in Pune.
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay" style="display: none;">
+        <div class="mobile-links">
+            <button class="close-mobile-nav" id="closeMobileNav">&times;</button>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="index.html#about">About</a>
+            <a href="locations.html">Find Us</a>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script src="app.js"></script>
+    <script src="locations.js"></script>
+</body>
+
+</html>
