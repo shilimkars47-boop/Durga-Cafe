@@ -36,7 +36,7 @@
         <!-- HERO SECTION -->
         <section id="home" class="hero-wrapper">
             <!-- Background Image -->
-            <img src="images/cold-coffee.png" alt="Aura Cold Coffee" class="hero-bg-image">
+            <img src="images/cold-coffee.png" alt="Aura Café Cold Coffee" class="hero-bg-image">
             <div class="hero-overlay"></div>
 
             <!-- Decorative Orbs -->
@@ -45,20 +45,29 @@
 
             <!-- Hero Content -->
             <div class="hero-content reveal">
-                <span class="hero-tag"><i class="fa-solid fa-star" style="margin-right:6px;font-size:0.7rem;"></i>Est. 2003 · Pune's Finest</span>
+                <span class="hero-tag">
+                    <i class="fa-solid fa-circle" style="font-size:0.45rem; margin-right:8px; opacity:0.6;"></i>
+                    Est. 2003 &nbsp;·&nbsp; Pune's Finest
+                </span>
                 <h1 class="hero-title">
                     <span class="hero-static">Always </span>
                     <span class="hero-animated-word" id="heroWord">Fresh</span>
                 </h1>
                 <p class="hero-subtitle">
-                    Aura Café — Pune's most loved coffee destination since 2003. Experience our legendary thick cold coffee, iconic misal pav, and so much more.
+                    Specialty coffee and honest food, crafted fresh every single day. 12 locations across Pune.
                 </p>
+                <div class="hero-caption">
+                    <span class="hero-caption-item">Pune</span>
+                    <span class="hero-caption-item">Est. 2003</span>
+                    <span class="hero-caption-item">12 Locations</span>
+                    <span class="hero-caption-item">5★ Award Winner</span>
+                </div>
                 <div class="hero-cta-group">
                     <a href="menu.html" class="btn-primary" id="viewMenuBtn">
-                        <i class="fa-solid fa-utensils"></i> View Menu
+                        <i class="fa-solid fa-utensils"></i> Explore Menu
                     </a>
                     <a href="locations.html" class="btn-outline" id="findUsBtn">
-                        <i class="fa-solid fa-location-dot"></i> Find Us
+                        <i class="fa-solid fa-location-dot"></i> Find a Branch
                     </a>
                 </div>
             </div>
@@ -77,7 +86,7 @@
         <section class="stats-bar reveal">
             <div class="stat-item">
                 <span class="stat-number" data-target="20">0</span><span class="stat-suffix">+</span>
-                <p class="stat-label">Years of Legacy</p>
+                <p class="stat-label">Years Brewing</p>
             </div>
             <div class="stat-divider"></div>
             <div class="stat-item">
@@ -92,9 +101,14 @@
             <div class="stat-divider"></div>
             <div class="stat-item">
                 <span class="stat-number" data-target="50000">0</span><span class="stat-suffix">+</span>
-                <p class="stat-label">Happy Customers</p>
+                <p class="stat-label">Cups Served</p>
             </div>
         </section>
+
+        <!-- SECTION LABEL -->
+        <div class="section-label reveal">
+            <span>/ What We Serve</span>
+        </div>
 
         <!-- BENTO ROW 1: MENU HIGHLIGHTS -->
         <section id="menu" class="bento-grid-4">
@@ -103,7 +117,7 @@
                 <div class="menu-intro-content">
                     <span class="menu-eyebrow">Our Signature</span>
                     <h3 class="bento-card-title">Classics</h3>
-                    <p class="menu-intro-desc">Timeless flavours crafted with love since 2003.</p>
+                    <p class="menu-intro-desc">Timeless flavours. Honest prices. Made fresh daily.</p>
                     <a href="menu.html" class="btn-menu-more">Full Menu <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -181,49 +195,59 @@
 
         </section>
 
+        <!-- SECTION LABEL -->
+        <div class="section-label reveal">
+            <span>/ Our Story</span>
+        </div>
+
         <!-- BENTO ROW 2: ABOUT & AWARDS -->
         <section id="about" class="bento-grid-mixed">
 
-            <!-- Large Image (Left) -->
+            <!-- Large Image Tile (Left) -->
             <div class="bento-large-image reveal">
-                <div class="logo-ring-wrapper">
-                    <img src="dc.jpg" alt="Aura Café Official Logo"
-                        onerror="this.src='images/aura_cafe_logo.png'">
+                <div class="about-img-tile">
+                    <img src="dc.jpg" alt="Aura Café" onerror="this.src='images/aura_cafe_logo.png'">
+                    <div class="about-img-tile-caption">
+                        <p>Since 2003</p>
+                        <h3>Pune's Most Loved</h3>
+                    </div>
                 </div>
             </div>
 
             <!-- Text Card (Center Top) -->
             <div class="bento-text-card about-intro reveal">
                 <span class="about-eyebrow"><i class="fa-solid fa-mug-hot"></i> Our Story</span>
-                <h2>Welcome to<br>Aura Café!</h2>
+                <h2>Welcome to<br>Aura Café.</h2>
                 <p>
-                    Aura Café is a leading food service retailer in Pune & arguably the most recognized coffee brand.
-                    We have continuously strived to meet our customer's demands.
+                    A leading food service brand in Pune — recognised for our legendary cold coffee, honest prices, and a menu that keeps evolving with our customers.
                 </p>
                 <p>
-                    Our ever evolving menu & various additions of branches across Pune support this. We believe in providing high quality products at reasonable prices.
+                    High quality products at prices that make sense. That's been our promise since day one, and it still is.
                 </p>
                 <div class="about-tags">
                     <span class="about-tag"><i class="fa-solid fa-check"></i> Since 2003</span>
-                    <span class="about-tag"><i class="fa-solid fa-check"></i> 100% Pure Veg Options</span>
+                    <span class="about-tag"><i class="fa-solid fa-check"></i> Pure Veg Options</span>
                     <span class="about-tag"><i class="fa-solid fa-check"></i> Franchise Model</span>
                 </div>
+                <a href="locations.html" style="margin-top: 20px; font-size: 0.82rem; font-weight: 700; color: var(--text-secondary); letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 8px; transition: color 0.25s;">
+                    See all locations <i class="fa-solid fa-arrow-right" style="font-size: 0.7rem;"></i>
+                </a>
             </div>
 
-            <!-- Dark Awards Card (Bottom Middle) -->
+            <!-- Awards Card 1 -->
             <div class="bento-dark-text-card award-primary reveal" id="awards">
                 <div class="award-icon"><i class="fa-solid fa-trophy"></i></div>
                 <h4>Times of India Group</h4>
                 <h3>Most Iconic Franchiser Award</h3>
-                <p>For the 5th year in a row Aura Café has been felicitated for its exemplary business model and great work ethics.</p>
+                <p>Felicitated for the 5th consecutive year for an exemplary business model and outstanding work ethics.</p>
             </div>
 
-            <!-- Dark Awards Card 2 (Bottom Right) -->
+            <!-- Awards Card 2 -->
             <div class="bento-dark-text-card award-secondary reveal">
                 <div class="award-icon"><i class="fa-solid fa-medal"></i></div>
                 <h4>Economic Times</h4>
                 <h3>Best Franchise Chain</h3>
-                <p>Awarded at the prestigious Economic Times ceremony in 2021 for superior financial performance.</p>
+                <p>Recognised at the prestigious Economic Times ceremony in 2021 for superior financial performance.</p>
             </div>
 
         </section>
@@ -234,10 +258,10 @@
                 <div class="footer-brand">
                     <img src="logo 2.png" alt="Aura Café Logo" class="footer-logo"
                         onerror="this.src='images/aura_cafe_logo.png'">
-                    <p class="footer-tagline">Brewing happiness in Pune since 2003.</p>
+                    <p class="footer-tagline">Specialty coffee & honest food, brewed in Pune since 2003.</p>
                 </div>
                 <div class="footer-links-group">
-                    <h5>Quick Links</h5>
+                    <h5>Navigation</h5>
                     <a href="index.html">Home</a>
                     <a href="menu.html">Menu</a>
                     <a href="#about">About</a>
@@ -245,25 +269,24 @@
                     <a href="#awards">Awards</a>
                 </div>
                 <div class="footer-contact-group">
-                    <h5>Contact Us</h5>
+                    <h5>Get in Touch</h5>
                     <p><i class="fa-solid fa-location-dot"></i> Kothrud, Pune, Maharashtra 411038</p>
                     <p><i class="fa-solid fa-envelope"></i> info@auracafe.com</p>
                     <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
                 </div>
                 <div class="footer-social-group">
-                    <h5>Follow Us</h5>
+                    <h5>Follow Along</h5>
                     <div class="social-icons">
                         <a href="#" class="social-circle" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#" class="social-circle" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#" class="social-circle" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
                         <a href="#" class="social-circle" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
                     </div>
-                    <a href="menu.html" class="btn-footer">View Full Menu <i class="fa-solid fa-arrow-right"
-                            style="margin-left: 8px;"></i></a>
+                    <a href="menu.html" class="btn-footer">View Full Menu <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Aura Café. All rights reserved. Made with <i class="fa-solid fa-heart" style="color:#F7D619;"></i> in Pune.</p>
+                <p>&copy; 2024 Aura Café. All rights reserved. Crafted with care in Pune. &nbsp;·&nbsp; <span style="opacity:0.5;">Built as a portfolio project.</span></p>
             </div>
         </footer>
 

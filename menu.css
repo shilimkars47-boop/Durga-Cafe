@@ -451,3 +451,87 @@
         font-size: 1.8rem;
     }
 }
+
+/* =========================================
+   TAB COUNT BADGE
+   ========================================= */
+.tab-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-tertiary);
+    font-size: 0.65rem;
+    font-weight: 700;
+    min-width: 20px;
+    height: 18px;
+    padding: 0 5px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    transition: var(--ease);
+    line-height: 1;
+}
+
+.tab-btn.active .tab-count {
+    background: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.6);
+    border-color: transparent;
+}
+
+/* =========================================
+   NEW BADGE VARIANT
+   ========================================= */
+.bestseller-badge.new-badge {
+    background: rgba(255, 255, 255, 0.18);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* =========================================
+   MENU CARD HOVER — SLIDE-UP CTA
+   ========================================= */
+.menu-card {
+    position: relative;
+    overflow: hidden;
+}
+
+/* =========================================
+   MENU HERO NOISE TEXTURE
+   ========================================= */
+.menu-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: inherit;
+}
+
+/* =========================================
+   CTA SECTION — NOISE + BORDER GRID
+   ========================================= */
+.menu-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.menu-cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 480px) {
+    .tab-count {
+        display: none;
+    }
+}
