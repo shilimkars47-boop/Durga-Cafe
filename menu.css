@@ -1,5 +1,5 @@
 /* ============================================================
-   AURA CAFÉ — MENU PAGE STYLES (menu.css)
+   AURA CAFÉ — MENU PAGE STYLES (menu.css) — MINIMAL BLACK
    ============================================================ */
 
 /* =========================================
@@ -7,14 +7,15 @@
    ========================================= */
 .menu-hero {
     position: relative;
-    background: linear-gradient(135deg, var(--card-bg-darker) 0%, var(--card-bg-dark) 100%);
-    border-radius: var(--border-radius-xl);
+    background: var(--bg-surface);
+    border-radius: var(--radius-xl);
     padding: 80px 70px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     overflow: hidden;
-    min-height: 300px;
+    min-height: 280px;
     display: flex;
     align-items: center;
+    border: 1px solid var(--border);
 }
 
 .menu-hero-content {
@@ -27,35 +28,37 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(247, 214, 25, 0.15);
-    border: 1px solid rgba(247, 214, 25, 0.4);
-    color: var(--brand-yellow);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: var(--text-secondary);
     padding: 7px 18px;
-    border-radius: var(--border-radius-pill);
-    font-size: 0.78rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.74rem;
     font-weight: 600;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 }
 
 .menu-hero-title {
     font-size: 4.5rem;
     line-height: 1.05;
-    color: var(--text-light);
-    margin-bottom: 20px;
+    color: var(--text-primary);
+    margin-bottom: 18px;
     letter-spacing: -1.5px;
 }
 
 .yellow-text {
-    color: var(--brand-yellow);
+    color: var(--text-primary);
+    font-style: italic;
+    opacity: 0.6;
 }
 
 .menu-hero-sub {
-    font-size: 1rem;
-    color: var(--text-muted);
+    font-size: 0.98rem;
+    color: var(--text-tertiary);
     line-height: 1.75;
-    max-width: 520px;
+    max-width: 500px;
     font-weight: 400;
 }
 
@@ -63,15 +66,15 @@
 .menu-hero-orb {
     position: absolute;
     border-radius: 50%;
-    filter: blur(90px);
+    filter: blur(100px);
     pointer-events: none;
-    opacity: 0.2;
+    opacity: 0.05;
 }
 
 .orb-a {
     width: 450px;
     height: 450px;
-    background: var(--brand-yellow);
+    background: #ffffff;
     top: -120px;
     right: -80px;
 }
@@ -79,7 +82,7 @@
 .orb-b {
     width: 250px;
     height: 250px;
-    background: #00ffa2;
+    background: #aaaaaa;
     bottom: -60px;
     right: 30%;
 }
@@ -89,53 +92,53 @@
    ========================================= */
 .category-tabs {
     display: flex;
-    gap: 10px;
-    margin-bottom: 40px;
+    gap: 8px;
+    margin-bottom: 36px;
     flex-wrap: wrap;
-    padding: 18px 24px;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: var(--border-radius-lg);
-    backdrop-filter: blur(12px);
+    padding: 16px 20px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
 }
 
 .tab-btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 7px;
     background: transparent;
-    border: 1.5px solid rgba(255, 255, 255, 0.18);
-    color: rgba(255, 255, 255, 0.75);
-    padding: 10px 22px;
-    border-radius: var(--border-radius-pill);
-    font-size: 0.88rem;
+    border: 1px solid var(--border);
+    color: var(--text-tertiary);
+    padding: 9px 20px;
+    border-radius: var(--radius-pill);
+    font-size: 0.86rem;
     font-weight: 600;
     font-family: var(--font-body);
     cursor: pointer;
-    transition: var(--transition-smooth);
+    transition: var(--ease);
     white-space: nowrap;
+    letter-spacing: 0.2px;
 }
 
 .tab-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--text-light);
-    border-color: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text-primary);
+    border-color: var(--border-hover);
     transform: translateY(-2px);
 }
 
 .tab-btn.active {
-    background: var(--brand-yellow);
-    color: var(--text-dark);
-    border-color: var(--brand-yellow);
-    box-shadow: var(--shadow-yellow);
+    background: var(--text-primary);
+    color: var(--text-on-accent);
+    border-color: var(--text-primary);
     transform: translateY(-2px);
+    box-shadow: var(--shadow-white);
 }
 
 /* =========================================
    MENU SECTIONS
    ========================================= */
 .menu-section {
-    margin-bottom: 60px;
+    margin-bottom: 56px;
     transition: opacity 0.4s ease;
 }
 
@@ -144,26 +147,26 @@
 }
 
 .section-header {
-    margin-bottom: 28px;
-    padding-bottom: 18px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 26px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
     display: flex;
     align-items: baseline;
     gap: 16px;
 }
 
 .section-eyebrow {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 2.5px;
-    color: var(--brand-yellow);
+    color: var(--text-tertiary);
     font-weight: 700;
     font-family: var(--font-body);
 }
 
 .section-title {
     font-size: 2.2rem;
-    color: var(--text-light);
+    color: var(--text-primary);
     letter-spacing: -0.5px;
 }
 
@@ -173,7 +176,7 @@
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 22px;
+    gap: 18px;
 }
 
 .specials-grid {
@@ -181,23 +184,25 @@
 }
 
 .menu-card {
-    background: var(--card-bg-light);
-    border-radius: var(--border-radius-lg);
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: var(--shadow-soft);
-    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-sm);
+    transition: var(--ease);
     cursor: default;
+    border: 1px solid var(--border);
 }
 
 .menu-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-medium);
+    transform: translateY(-7px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-hover);
 }
 
 .menu-card-wide {
-    /* In specials grid these just follow the grid */
+    /* follows the grid */
 }
 
 /* Card Image */
@@ -206,7 +211,7 @@
     width: 100%;
     aspect-ratio: 4/3;
     overflow: hidden;
-    background: linear-gradient(135deg, #0f664a, #073d2a);
+    background: #0d0d0d;
 }
 
 .menu-card-img-wrap img {
@@ -215,10 +220,12 @@
     object-fit: cover;
     transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     display: block;
+    filter: grayscale(10%);
 }
 
 .menu-card:hover .menu-card-img-wrap img {
-    transform: scale(1.08);
+    transform: scale(1.07);
+    filter: grayscale(0%);
 }
 
 /* Badges */
@@ -227,34 +234,35 @@
     top: 14px;
     left: 14px;
     z-index: 3;
-    background: #e8370d;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     font-weight: 700;
     padding: 5px 12px;
-    border-radius: var(--border-radius-pill);
+    border-radius: var(--radius-pill);
     display: inline-flex;
     align-items: center;
     gap: 5px;
     letter-spacing: 0.4px;
     text-transform: uppercase;
-    box-shadow: 0 4px 14px rgba(232, 55, 13, 0.4);
+    border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(8px);
 }
 
 .bestseller-badge.special {
-    background: linear-gradient(135deg, #b8860b, #f5c518);
-    color: #1a1a1a;
-    box-shadow: 0 4px 14px rgba(245, 197, 24, 0.4);
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-color: rgba(255,255,255,0.35);
 }
 
 .bestseller-badge.spicy {
-    background: #c0392b;
-    box-shadow: 0 4px 14px rgba(192, 57, 43, 0.4);
+    background: rgba(200, 60, 60, 0.5);
+    border-color: rgba(200,80,80,0.4);
 }
 
 /* Card Body */
 .menu-card-body {
-    padding: 22px 24px 24px;
+    padding: 20px 22px 22px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -269,27 +277,27 @@
 }
 
 .menu-card-top h3 {
-    font-size: 1.15rem;
-    color: var(--text-dark);
+    font-size: 1.1rem;
+    color: var(--text-primary);
     line-height: 1.25;
     font-weight: 700;
 }
 
 .menu-price {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 800;
-    color: var(--bg-main);
+    color: var(--text-primary);
     font-family: var(--font-body);
     white-space: nowrap;
-    background: rgba(21, 141, 102, 0.1);
-    border: 1px solid rgba(21, 141, 102, 0.25);
-    padding: 4px 12px;
-    border-radius: var(--border-radius-pill);
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid var(--border);
+    padding: 3px 11px;
+    border-radius: var(--radius-pill);
 }
 
 .menu-desc {
-    font-size: 0.85rem;
-    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.84rem;
+    color: var(--text-tertiary);
     line-height: 1.65;
     flex: 1;
 }
@@ -298,48 +306,53 @@
 .menu-card-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 7px;
+    gap: 6px;
     margin-top: 4px;
 }
 
 .tag {
     display: inline-block;
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     font-weight: 600;
     padding: 3px 10px;
-    border-radius: var(--border-radius-pill);
-    background: rgba(0, 0, 0, 0.06);
-    color: rgba(0, 0, 0, 0.55);
+    border-radius: var(--radius-pill);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-tertiary);
     letter-spacing: 0.3px;
+    border: 1px solid var(--border);
 }
 
 .tag.veg {
-    background: rgba(34, 139, 34, 0.1);
-    color: #1a6b1a;
+    background: rgba(60, 160, 60, 0.1);
+    color: rgba(120, 210, 120, 0.9);
+    border-color: rgba(60,160,60,0.2);
 }
 
 .tag.egg {
-    background: rgba(210, 105, 30, 0.1);
-    color: #8b4513;
+    background: rgba(200, 130, 50, 0.1);
+    color: rgba(210, 160, 90, 0.9);
+    border-color: rgba(200,130,50,0.2);
 }
 
 .tag.spicy-tag {
-    background: rgba(220, 20, 60, 0.1);
-    color: #9b1b2a;
+    background: rgba(200, 60, 60, 0.1);
+    color: rgba(220, 100, 100, 0.9);
+    border-color: rgba(200,60,60,0.2);
 }
 
 .tag.award-tag {
-    background: rgba(184, 134, 11, 0.12);
-    color: #7a5800;
+    background: rgba(200, 180, 100, 0.08);
+    color: rgba(210, 190, 120, 0.85);
+    border-color: rgba(200,180,100,0.15);
 }
 
 /* =========================================
    ACTIVE NAV LINK
    ========================================= */
 .nav-active {
-    color: var(--text-dark) !important;
-    background-color: var(--brand-yellow) !important;
-    box-shadow: var(--shadow-yellow) !important;
+    color: var(--text-on-accent) !important;
+    background-color: var(--text-primary) !important;
+    box-shadow: var(--shadow-white) !important;
 }
 
 /* =========================================
@@ -347,12 +360,13 @@
    ========================================= */
 .menu-cta {
     position: relative;
-    background: linear-gradient(135deg, var(--card-bg-dark) 0%, var(--card-bg-darker) 100%);
-    border-radius: var(--border-radius-xl);
-    padding: 70px 70px;
-    margin-bottom: 24px;
+    background: var(--bg-surface);
+    border-radius: var(--radius-xl);
+    padding: 70px;
+    margin-bottom: 20px;
     overflow: hidden;
     text-align: center;
+    border: 1px solid var(--border);
 }
 
 .menu-cta-content {
@@ -362,17 +376,17 @@
 
 .menu-cta h2 {
     font-size: 3rem;
-    color: var(--text-light);
+    color: var(--text-primary);
     margin-bottom: 16px;
     letter-spacing: -1px;
 }
 
 .menu-cta p {
     font-size: 1rem;
-    color: var(--text-muted);
+    color: var(--text-tertiary);
     margin-bottom: 36px;
     line-height: 1.75;
-    max-width: 500px;
+    max-width: 480px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -381,10 +395,10 @@
     position: absolute;
     width: 400px;
     height: 400px;
-    background: var(--brand-yellow);
+    background: #ffffff;
     border-radius: 50%;
-    filter: blur(120px);
-    opacity: 0.12;
+    filter: blur(140px);
+    opacity: 0.04;
     top: -100px;
     right: -80px;
     pointer-events: none;
@@ -395,7 +409,7 @@
    ========================================= */
 @media (max-width: 900px) {
     .menu-hero {
-        padding: 50px 40px;
+        padding: 50px 38px;
     }
     .menu-hero-title {
         font-size: 3rem;
@@ -413,17 +427,17 @@
 
 @media (max-width: 600px) {
     .menu-hero {
-        padding: 40px 24px;
+        padding: 38px 22px;
     }
     .menu-hero-title {
         font-size: 2.2rem;
     }
     .category-tabs {
-        gap: 8px;
-        padding: 14px 16px;
+        gap: 6px;
+        padding: 12px 14px;
     }
     .tab-btn {
-        padding: 8px 16px;
+        padding: 8px 14px;
         font-size: 0.8rem;
     }
     .menu-grid {
