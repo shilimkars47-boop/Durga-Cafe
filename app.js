@@ -1,5 +1,5 @@
 // ============================================================
-// CAFE DURGA — ENHANCED INTERACTIVITY v2.0
+// AURA CAFÉ — ENHANCED INTERACTIVITY v2.0
 // ============================================================
 
 // --- DOM ELEMENTS ---

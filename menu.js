@@ -1,5 +1,5 @@
 // ============================================================
-// CAFE DURGA — MENU PAGE INTERACTIVITY (menu.js)
+// AURA CAFÉ — MENU PAGE INTERACTIVITY (menu.js)
 // ============================================================
 
 document.addEventListener('DOMContentLoaded', () => {

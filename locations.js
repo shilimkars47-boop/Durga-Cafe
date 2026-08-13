@@ -1,19 +1,19 @@
 // ============================================================
-// CAFE DURGA — LOCATIONS PAGE INTERACTIVITY (locations.js)
+// AURA CAFÉ — LOCATIONS PAGE INTERACTIVITY (locations.js)
 // ============================================================
 
 const branchData = [
-    { name: 'Hotel Durga — Flagship', addr: 'Malati Complex, Kothrud, Pune' },
-    { name: 'Cafe Durga', addr: 'Mayur Colony, Kothrud, Pune' },
-    { name: 'Cafe Durga', addr: 'Chaitanya Nagar, Kothrud, Pune' },
-    { name: 'Cafe Durga', addr: 'Karvenagar, Pune' },
-    { name: 'Cafe Durga', addr: 'Bavdhan, Pune' },
-    { name: 'Cafe Durga', addr: 'Rambaug Colony, Kothrud, Pune' },
-    { name: 'Cafe Durga', addr: 'Bopodi, Pune' },
-    { name: 'Durga Cafe', addr: 'Viman Nagar, Pune' },
-    { name: 'Cafe Durga', addr: 'Sahawas Society, Karvenagar, Pune' },
-    { name: 'Cafe Durga', addr: 'Symbiosis Lavale Road, Pune' },
-    { name: 'Cafe Durga', addr: 'Hadapsar, Pune' },
+    { name: 'Aura Café — Flagship', addr: 'Malati Complex, Kothrud, Pune' },
+    { name: 'Aura Café', addr: 'Mayur Colony, Kothrud, Pune' },
+    { name: 'Aura Café', addr: 'Chaitanya Nagar, Kothrud, Pune' },
+    { name: 'Aura Café', addr: 'Karvenagar, Pune' },
+    { name: 'Aura Café', addr: 'Bavdhan, Pune' },
+    { name: 'Aura Café', addr: 'Rambaug Colony, Kothrud, Pune' },
+    { name: 'Aura Café', addr: 'Bopodi, Pune' },
+    { name: 'Aura Café', addr: 'Viman Nagar, Pune' },
+    { name: 'Aura Café', addr: 'Sahawas Society, Karvenagar, Pune' },
+    { name: 'Aura Café', addr: 'Symbiosis Lavale Road, Pune' },
+    { name: 'Aura Café', addr: 'Hadapsar, Pune' },
 ];
 
 function initLocations() {
@@ -63,7 +63,7 @@ function selectCard(card, idx) {
     // Update map
     const query = card.getAttribute('data-query');
     const directionsHref = `https://www.google.com/maps/dir/?api=1&destination=${query}`;
-    const data = branchData[idx] || { name: 'Cafe Durga', addr: card.getAttribute('data-directions') || '' };
+    const data = branchData[idx] || { name: 'Aura Café', addr: card.getAttribute('data-directions') || '' };
 
     // Show loader
     if (mapLoader) {
